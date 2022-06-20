@@ -1,33 +1,41 @@
 # Loan_Analyzer
-
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+Loan officers need a way to determine if a loan applicant is credit worthy. This program searches through a provided list of loans defined within the daily_rate_sheet.csv file and determines if there are any qualifying loans based upon an applicant's credit score, debt to income ratio, loan to value ratio, and maximum loan amount.  The qualifying loans are then provided as output to the qualifying_loans.csv file for the loan officers to review. 
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This project leverages python 3.7 with the following packages:
+
+* [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
+
+* [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before running the application first install the following dependencies.
+
+```python
+  pip install fire
+  pip install questionary
+```
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+To use the loan analyzer application simply clone the repository and run the **app.py** with:
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+Brought to you by [Drew Herrera](https://www.linkedin.com/in/andrewjherrera).
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+MIT

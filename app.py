@@ -12,7 +12,7 @@ import questionary
 import csv
 from pathlib import Path
 
-from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import load_csv, save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -23,28 +23,6 @@ from qualifier.filters.max_loan_size import filter_max_loan_size
 from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
-
-def save_csv(path, qualifying_loans_list):
-    """Writes the CSV file from path and loans list provided.
-
-    Args:
-        csvpath (Path): The csv file path.
-        qualifying_loans_list: The list of qualifying loans to write to output file.
-
-    """
-
-    """Create header list"""
-    loan_header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
-
-    with open(path, 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
-
-        # Write the CSV header
-        csvwriter.writerow(loan_header)
-
-        # Write the CSV data
-        for loan in qualifying_loans_list:
-            csvwriter.writerow(loan)
 
 
 def load_bank_data():
@@ -132,7 +110,15 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    save_csv("./data/qualifying_loans.csv", qualifying_loans)
+
+    # Create header list
+    loan_header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
+
+    # Define output path
+    csvpath = "./data/qualifying_loans.csv"
+
+    # Save qualifying loan list to csv file
+    save_csv(csvpath, loan_header, qualifying_loans)
 
 
 def run():
