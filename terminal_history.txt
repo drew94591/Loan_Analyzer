@@ -1,0 +1,50 @@
+  762  cd 'Module 1 Challenge'
+  763  ls
+  764  cd ..
+  765  ls
+  766  cd ..
+  767  ls
+  768  cd 'Module 2'
+  769  ls
+  770  mkdir 'Module 2 Challenge'
+  771  ls
+  772  cd 'Module 2 Cha*'
+  773  cd Module*
+  774  ls
+  775  ls
+  776  ls
+  777  cd Starter_Code
+  778  ls
+  779  cd S*
+  780  ls
+  781  cd loan*
+  782  ls
+  783  cd ..
+  784  ls
+  785  cd ..
+  786  ls
+  787  cd ..
+  788  ls
+  789  code .
+  790  ls
+  791  cd ..
+  792  ls
+  793  cd 'Module 2 Challenge'
+  794  ls
+  795  mkdir Repo
+  796  ls
+  797  cd Repo
+  798  ls
+  799  ls
+  800  git clone https://github.com/drew94591/Loan_Analyzer.git
+  801  ls
+  802  cd Loan*
+  803  ls
+  804  ls
+  805  git status
+  806  git add .
+  807  git status
+  808  git commit -m "Added initial version of project files for the Loan Analyzer program"
+  809  git status
+  810  git push
+  811  history 50 > terminal_history.txt
