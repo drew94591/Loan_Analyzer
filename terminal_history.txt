@@ -1,50 +1,50 @@
-  762  cd 'Module 1 Challenge'
-  763  ls
-  764  cd ..
-  765  ls
-  766  cd ..
-  767  ls
-  768  cd 'Module 2'
-  769  ls
-  770  mkdir 'Module 2 Challenge'
-  771  ls
-  772  cd 'Module 2 Cha*'
-  773  cd Module*
-  774  ls
-  775  ls
-  776  ls
-  777  cd Starter_Code
-  778  ls
-  779  cd S*
-  780  ls
-  781  cd loan*
-  782  ls
-  783  cd ..
-  784  ls
-  785  cd ..
-  786  ls
-  787  cd ..
-  788  ls
-  789  code .
-  790  ls
-  791  cd ..
-  792  ls
-  793  cd 'Module 2 Challenge'
-  794  ls
-  795  mkdir Repo
-  796  ls
-  797  cd Repo
-  798  ls
-  799  ls
-  800  git clone https://github.com/drew94591/Loan_Analyzer.git
-  801  ls
-  802  cd Loan*
-  803  ls
-  804  ls
-  805  git status
-  806  git add .
   807  git status
   808  git commit -m "Added initial version of project files for the Loan Analyzer program"
   809  git status
   810  git push
   811  history 50 > terminal_history.txt
+  812  git status
+  813  git add *
+  814  ls
+  815  vi term*
+  816  ls
+  817  git status
+  818  git commit -m "Added initial terminal history file"
+  819  git status
+  820  git push
+  821  ls
+  822  code .
+  823  ls
+  824  python app.py
+  825  python app.py
+  826  python app.py
+  827  python app.py
+  828  ls
+  829  git status
+  830  git add .
+  831  git status
+  832  git commit -m "Created new function called save_csv to output qualified loans into an already predetermined csv file in the data folder" 
+  833  git status
+  834  git push
+  835  ls
+  836  cd data
+  837  ls
+  838  mv qualify_loans.csv qualifying_loans.csv
+  839  ls
+  840  cd ..
+  841  ls
+  842  git status
+  843  python app.py
+  844  git status
+  845  git add .
+  846  git status
+  847  git commit -m "Renamed hard coded file from qualify_loans.csv to qualifying_loans.csv"
+  848  git status
+  849  git push
+  850  history 50 > terminal_history.txt
+  851  ls -l
+  852  view ter*
+  853  history 200 > terminal_history.txt
+  854  view term*
+  855  ls
+  856  history 50 > terminal_history.txt
