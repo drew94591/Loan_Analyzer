@@ -132,7 +132,7 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    save_csv("./data/qualify_loans.csv", qualifying_loans)
+    save_csv("./data/qualifying_loans.csv", qualifying_loans)
 
 
 def run():
