@@ -1,5 +1,5 @@
 # Loan Analyzer
-Loan officers need a way to determine if a loan applicant is credit worthy. This application searches through a provided list of loans defined within the daily_rate_sheet.csv file and determines if there are any qualifying loans based upon an applicant's credit score, debt to income ratio, loan to value ratio, and maximum loan amount.  The qualifying loans are then provided as output to the qualifying_loans.csv file for the loan officers to review. 
+Loan officers need a way to determine if a loan applicant is credit worthy. This application searches through a provided list of loans defined within the daily_rate_sheet.csv file and determines if there are any qualifying loans based upon an applicant's credit score, debt to income ratio, loan to value ratio, and maximum loan amount.  The qualifying loans are then able to be outputted to a specified .csv file or screen for the loan officers to review. 
 
 ---
 
@@ -36,9 +36,9 @@ To use the loan analyzer application simply clone the repository and run the **a
 python app.py
 ```
 
-Upon launching the loan qualifier application you will be greeted with the following prompts.
+Upon launching the loan analyzer application you will be greeted with the following prompts.
 
-![Loan Qualifier Prompts](images/example_prompts.gif)
+![Loan Analyzer Prompts](images/example_prompts.gif)
 
 ---
 

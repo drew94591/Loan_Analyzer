@@ -104,31 +104,32 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 
 def save_qualifying_loans(qualifying_loans):
-    """Saves the qualifying loans to a CSV file.
+    """Prompts the applicant to save the qualifying loans to a CSV file.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # Prompt user if they would like to save results to a file
+    # Prompt applicant if they would like to save results to a file
     save_to_file = questionary.confirm("Would you like to save the data into a .csv file?").ask()
 
     if save_to_file:
         if qualifying_loans:
-            # Prompt user for file output path input
+            # Prompt applicant for file output path input
             csvpath = questionary.text("Please provide the path to the .csv file: ").ask() 
 
             # Create header list
             loan_header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
 
-            # Save qualifying loan list to specified csv file
+            # Save qualifying loan list to a specified .csv file
             save_csv(csvpath, loan_header, qualifying_loans)        
         else:
             print("I'm sorry but there are no qualifying loans!")
     else:
         if qualifying_loans:
-            # Output qualifying loan list to screen
+            # Output qualifying loan list to the screen instead
             print(qualifying_loans) 
         else:      
+            # Display a message that the list is empty
             print("I'm sorry but there are no qualifying loans!")
 
 def run():
