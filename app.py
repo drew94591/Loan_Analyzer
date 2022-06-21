@@ -109,17 +109,27 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
+    # Prompt user if they would like to save results to a file
+    save_to_file = questionary.confirm("Would you like to save the data into a .csv file?").ask()
 
-    # Create header list
-    loan_header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
+    if save_to_file:
+        if qualifying_loans:
+            # Prompt user for file output path input
+            csvpath = questionary.text("Please provide the path to the .csv file: ").ask() 
 
-    # Define output path
-    csvpath = "./data/qualifying_loans.csv"
+            # Create header list
+            loan_header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
 
-    # Save qualifying loan list to csv file
-    save_csv(csvpath, loan_header, qualifying_loans)
-
+            # Save qualifying loan list to specified csv file
+            save_csv(csvpath, loan_header, qualifying_loans)        
+        else:
+            print("I'm sorry but there are no qualifying loans!")
+    else:
+        if qualifying_loans:
+            # Output qualifying loan list to screen
+            print(qualifying_loans) 
+        else:      
+            print("I'm sorry but there are no qualifying loans!")
 
 def run():
     """The main function for running the script."""
