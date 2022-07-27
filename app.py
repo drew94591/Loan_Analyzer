@@ -1,10 +1,4 @@
-"""
-    Author:   Drew Herrera
-    Date:     06/20/2022
-    Version:  1.0
-    Purpose:  Loan Qualifier
-"""
-# File Imports
+# Import required libraries and dependencies
 import sys
 import fire
 import questionary
